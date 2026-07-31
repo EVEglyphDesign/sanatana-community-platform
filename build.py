@@ -173,6 +173,7 @@ NAV = [
     ("index.html", "Portal"),
     ("austin-hindu-temple/index.html", "Austin Hindu Temple"),
     ("education/index.html", "Education ladder"),
+    ("offer/index.html", "What the steward runs"),
     ("twin/index.html", "Digital twin"),
     ("provenance/index.html", "Provenance"),
 ]
@@ -246,6 +247,11 @@ def portal() -> None:
       <span class="kicker">Children &amp; parents</span>
       <h3>Education ladder</h3>
       <p>Five age bands from four years old to eighteen, each with a stated aim and four units.</p>
+    </a>""")
+    cards.append("""    <a class="card" href="offer/index.html">
+      <span class="kicker">The offer</span>
+      <h3>What the steward runs</h3>
+      <p>Automated site maintenance, a repository the community owns, and a checkable record.</p>
     </a>""")
     cards.append("""    <a class="card" href="twin/index.html">
       <span class="kicker">Consent first</span>
@@ -462,6 +468,42 @@ def twin_page() -> None:
                "What a community digital twin records, refuses to record, and who may read it."))
 
 
+def offer_page() -> None:
+    body = """    <h1>What the steward runs</h1>
+    <p class="lead">An outline, not a proposal. These are the parts of community web work that
+    are hardest to staff with volunteers &mdash; so they are the parts worth taking on.</p>
+
+    <table>
+      <tr><th style="width:32%">The work</th><th>What it means in practice</th></tr>
+      <tr><td>The website, maintained automatically</td><td>Not a volunteer remembering to update a page. Hours, festivals and class times stay current on their own, driven from one file.</td></tr>
+      <tr><td>A GitHub repository the community owns</td><td>Built and handed over. No subscription, no vendor, no login. It can be carried to any host, with or without the person who built it.</td></tr>
+      <tr><td>A record that can be checked</td><td>Every fact traced to its source. Corrections dated and appended, never silently overwritten.</td></tr>
+      <tr><td>Whatever is useful after that</td><td>Festival dates that drop into a phone calendar, class sign-ups, a newsletter archive, a youth education section.</td></tr>
+    </table>
+
+    <div class="note">
+      <strong>The order matters.</strong> Build the repository first and hand it over. Find uses
+      for it second. A surface that already exists and already works is a far easier thing to
+      extend than a plan for one.
+    </div>
+
+    <h2>The letter to the temple office</h2>
+    <p>The introduction Prasad can send, in English and Telugu, covering the four points above and
+    the five fields left open pending confirmation:
+    <a href="../EVEglyphDesign_Temple_Office_Letter.pdf">download the temple office letter (PDF)</a>.</p>
+
+    <h2>What this does not ask for</h2>
+    <ul>
+      <li>No budget. GitHub Pages serves the surface free and the content is plain text.</li>
+      <li>No authority. This is a community mirror; the temple's own site governs.</li>
+      <li>No commitment. If it is unwelcome it comes down the same day it is asked for.</li>
+    </ul>
+"""
+    write("offer/index.html",
+          page("What the steward runs", 1, "offer/index.html", body,
+               "The parts of community web work that are hardest to staff with volunteers."))
+
+
 def provenance_page() -> None:
     rows = [
         ("Name, mission statement, non-profit and volunteer character",
@@ -532,6 +574,7 @@ def main() -> None:
     for c in COMMUNITIES:
         community_page(c)
     education_page()
+    offer_page()
     twin_page()
     provenance_page()
     (ROOT / ".nojekyll").write_text("", encoding="utf-8")
