@@ -1,0 +1,4 @@
+EVEglyphDesign_Sanatana_Community_Platform_Charter.pdf
+stamped-hash-prefix: aa6058ea7081265d6bfde006472596cd
+file-sha256: 6cf14b7e476af9c9f34f579beef575ff883148091fb234cdde77942cf2f7da13
+generated: 2026-07-31T18:46:32Z

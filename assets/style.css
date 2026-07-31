@@ -1,0 +1,129 @@
+/* Sanatana Community Platform — EVEglyphDesign canon
+   Palette, typography and spacing per EgD-BOOT-001 §4.
+   Cream and orange. Fraunces display, Inter body. No teal, no navy-and-gold. */
+
+:root {
+  --cream: #fdfaf4;
+  --cream-2: #f7f2e7;
+  --ink: #1a1a1a;
+  --line: #e7e1d3;
+  --mute: #6b665c;
+  --accent: #e87722;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-top: 0;
+}
+h1 { font-size: 2.5rem; line-height: 1.12; margin-bottom: 0.5rem; }
+h2 { font-size: 1.7rem; line-height: 1.2; margin: 2.4rem 0 0.6rem; }
+h3 { font-size: 1.2rem; margin: 1.6rem 0 0.4rem; }
+
+p { margin: 0 0 1rem; }
+a { color: #b8560f; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--accent); }
+
+.wrap { max-width: 940px; margin: 0 auto; padding: 0 1.4rem; }
+
+/* Header */
+.masthead {
+  background: var(--cream-2);
+  border-bottom: 1px solid var(--line);
+}
+.masthead .wrap {
+  display: flex; align-items: center; gap: 1.1rem;
+  padding-top: 1.3rem; padding-bottom: 1.3rem;
+}
+.mark {
+  width: 54px; height: 54px; flex: 0 0 54px;
+  border: 2px solid var(--accent); border-radius: 50%;
+  display: grid; place-items: center;
+  font-family: 'Fraunces', Georgia, serif; font-size: 1.5rem; color: var(--accent);
+  background: var(--cream);
+}
+.masthead h1 { font-size: 1.35rem; margin: 0; }
+.masthead .sub { font-size: 0.92rem; color: var(--mute); margin: 0.15rem 0 0; }
+
+nav.bar { background: var(--cream); border-bottom: 1px solid var(--line); }
+nav.bar .wrap { display: flex; flex-wrap: wrap; gap: 1.2rem; padding: 0.7rem 1.4rem; }
+nav.bar a { font-size: 0.9rem; text-decoration: none; color: var(--mute); }
+nav.bar a:hover, nav.bar a[aria-current="page"] { color: var(--accent); }
+
+main { padding: 2.6rem 0 4rem; }
+
+.lead { font-size: 1.2rem; color: var(--mute); max-width: 40em; }
+.rule { height: 1px; background: var(--line); border: 0; margin: 2.6rem 0; }
+
+/* Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.2rem;
+  margin: 2rem 0;
+}
+.card {
+  background: var(--cream-2);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  padding: 1.2rem 1.3rem;
+  text-decoration: none; color: var(--ink);
+  display: block;
+}
+.card:hover { background: #f3ecdc; }
+.card h3 { margin: 0 0 0.35rem; font-size: 1.12rem; }
+.card p { margin: 0; font-size: 0.94rem; color: var(--mute); }
+.card .kicker {
+  display: block; font-size: 0.72rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem;
+}
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; margin: 1.2rem 0 1.8rem; font-size: 0.95rem; }
+th, td { text-align: left; padding: 0.6rem 0.7rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-family: 'Fraunces', Georgia, serif; font-weight: 600; background: var(--cream-2); }
+
+/* Callout */
+.note {
+  background: var(--cream-2);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
+  padding: 1.1rem 1.2rem;
+  margin: 1.8rem 0;
+  font-size: 0.95rem;
+}
+.note strong { color: #b8560f; }
+
+.term { font-style: italic; }
+ul, ol { padding-left: 1.3rem; }
+li { margin-bottom: 0.4rem; }
+
+footer.foot {
+  background: var(--cream-2);
+  border-top: 1px solid var(--line);
+  padding: 2rem 0;
+  font-size: 0.87rem;
+  color: var(--mute);
+}
+footer.foot .wrap > p { margin: 0 0 0.4rem; }
+.mark-line { font-family: 'Fraunces', Georgia, serif; font-style: italic; color: var(--accent); }
+
+@media (max-width: 620px) {
+  h1 { font-size: 2rem; }
+  body { font-size: 16px; }
+}

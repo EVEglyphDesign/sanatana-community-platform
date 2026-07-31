@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portal — Sanatana Community Platform</title>
+<meta name="description" content="A community-stewarded public surface for temple communities.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <div class="mark">&#2384;</div>
+    <div>
+      <h1>Sanatana Community Platform</h1>
+      <p class="sub">A community-stewarded surface &middot; EVEglyphDesign pattern</p>
+    </div>
+  </div>
+</header>
+<nav class="bar">
+  <div class="wrap">
+      <a href="index.html" aria-current="page">Portal</a>
+      <a href="austin-hindu-temple/index.html">Austin Hindu Temple</a>
+      <a href="education/index.html">Education ladder</a>
+      <a href="twin/index.html">Digital twin</a>
+      <a href="provenance/index.html">Provenance</a>
+  </div>
+</nav>
+<main>
+  <div class="wrap">
+    <h1>One community, one repository, one public surface</h1>
+    <p class="lead">This platform mirrors a temple community into a plain, fast, login-free
+    public surface that the community itself owns. It is the same machine that built a
+    Catholic parish portal, pointed at a Hindu temple and its families.</p>
+
+    <div class="note">
+      <strong>Status: seed build.</strong> The Austin Hindu Temple surface below is assembled
+      from the temple's own published pages and public filings. It is a working draft prepared
+      for review by the community, not an official temple publication. Fields the sources do
+      not settle are listed openly on each page rather than filled in by guesswork.
+    </div>
+
+    <div class="grid">
+    <a class="card" href="austin-hindu-temple/index.html">
+      <span class="kicker">Austin, Texas</span>
+      <h3>Austin Hindu Temple</h3>
+      <p>The reference community for this platform. Public record mirrored from the temple's own published pages, nothing invented.</p>
+    </a>
+    <a class="card" href="education/index.html">
+      <span class="kicker">Children &amp; parents</span>
+      <h3>Education ladder</h3>
+      <p>Five age bands from four years old to eighteen, each with a stated aim and four units.</p>
+    </a>
+    <a class="card" href="twin/index.html">
+      <span class="kicker">Consent first</span>
+      <h3>Digital twin</h3>
+      <p>What a community twin records, what it refuses to record, and who may read it.</p>
+    </a>
+    <a class="card" href="provenance/index.html">
+      <span class="kicker">Record</span>
+      <h3>Provenance</h3>
+      <p>Every fact on this surface, with the source it came from and whether it is confirmed.</p>
+    </a>
+    </div>
+
+    <hr class="rule">
+
+    <h2>Why a repository and not a website builder</h2>
+    <p>A website builder rents you a page and keeps the keys. A repository is a file you can
+    clone, read, diff, fork and carry to any host on earth. Every change is signed and dated.
+    If the steward moves away, the community keeps the record. That is the whole argument, and
+    it is why this exists as text under version control rather than as a subscription.</p>
+
+    <h2>How to add a second community</h2>
+    <ol>
+      <li>Open <code>build.py</code> and copy one <code>COMMUNITIES</code> entry.</li>
+      <li>Change the fields. Leave anything you cannot source in the <code>confirm</code> list.</li>
+      <li>Run <code>python3 build.py</code> and commit. The portal card appears by itself.</li>
+    </ol>
+
+    <h2>Common questions</h2>
+    <table>
+      <tr><th style="width:34%">Question</th><th>Answer</th></tr>
+      <tr><td>Is this the temple's official website?</td><td>No. The temple's own site remains at its own address and is linked from every page here. This is a community-stewarded mirror and working surface, built so that a family can keep its own record without asking a platform for permission.</td></tr>
+      <tr><td>Who owns what is written here?</td><td>The community owns its content. The repository is public and forkable, so any family or committee can take a copy and continue it without the original author.</td></tr>
+      <tr><td>What is a digital twin, in one sentence?</td><td>A record of a thing — a person, a family, an institution — kept by the thing itself, structured well enough that software can read it, and never held anywhere the subject cannot reach.</td></tr>
+      <tr><td>What does this cost?</td><td>Nothing. GitHub Pages serves the surface free; the content is plain text under version control. There is no login, no tracker, no advertisement and no analytics on these pages.</td></tr>
+    </table>
+
+  </div>
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p>Built 2026-07-31T18:44:33Z from <a href="https://github.com/EVEglyphDesign/sanatana-community-platform">the sanatana-community-platform repository</a>. Regenerate with <code>python3 build.py</code>.</p>
+    <p>Pattern inherited from <a href="https://github.com/EVEglyphDesign/paix-parish-platform">the PAIX Parish Platform</a>. Operating canon: <a href="https://eveglyphdesign.github.io/eve-glyph-boot-contract/">the EVEglyphDesign Executive Boot Contract</a>.</p>
+    <p>Community content belongs to the community. Platform pattern &copy; 2026 EVEglyphDesign. Key ID <code>EgD-KEY-2026-07</code>.</p>
+    <p class="mark-line">Pour le bien-&ecirc;tre du peuple.</p>
+  </div>
+</footer>
+</body>
+</html>
